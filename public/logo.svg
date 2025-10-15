@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 300 70"
+  width="270"
+  height="70"
+  role="img"
+  aria-labelledby="title desc"
+  class="yuri-logo"
+>
+  <title id="title">Yuri.dev Logo</title>
+  <desc id="desc">Modern geometric logo mark with Yuri.dev text</desc>
+
+  <defs>
+    <!-- Gradient palette -->
+    <linearGradient id="grad-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+
+    <!-- subtle background gradient -->
+    <radialGradient id="grad-light" cx="40%" cy="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+
+    <style><![CDATA[
+      .yuri-logo { cursor: pointer; }
+      .mark { transform-origin: 40px 40px; transition: transform .3s ease, filter .3s ease; }
+      .mark polygon { transition: fill .3s ease; }
+      .text { font-family: 'Inter', system-ui, sans-serif; fill: #E5E7EB; font-weight: 600; letter-spacing: .6px; }
+
+      /* Hover effect */
+      .yuri-logo:hover .mark { transform: rotate(-6deg) scale(1.06); filter: drop-shadow(0 0 10px rgba(99,102,241,0.4)); }
+      .yuri-logo:hover polygon:nth-child(2) { fill: #818CF8; }
+      .yuri-logo:hover polygon:nth-child(3) { fill: #A78BFA; }
+
+      /* Glow pulse animation */
+      @keyframes pulse {
+        0%, 100% { opacity: 0.85; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      .glow { fill: url(#grad-light); animation: pulse 3s infinite ease-in-out; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .yuri-logo:hover .mark { transform: none; filter: none; }
+        .glow { animation: none; }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- New geometric logo mark -->
+  <g transform="translate(8,8)" class="mark">
+    <!-- soft glow circle -->
+    <circle class="glow" cx="40" cy="32" r="30" />
+    <!-- layered triangles forming a diamond -->
+    <polygon points="40,4 64,32 40,60 16,32" fill="url(#grad-main)" />
+    <polygon points="40,10 58,32 40,54 22,32" fill="#4F46E5" opacity="0.6" />
+    <polygon points="40,18 52,32 40,46 28,32" fill="#7C3AED" opacity="0.9" />
+    <!-- thin border outline -->
+    <polygon points="40,4 64,32 40,60 16,32" fill="none" stroke="#ffffff" stroke-opacity="0.1" />
+  </g>
+
+  <!-- Text -->
+  <g transform="translate(100,48)">
+    <text class="text" x="0" y="-6" font-size="22">Yuri.dev</text>
+    <text class="text" x="0" y="14" font-size="11" fill="#A5B4FC" opacity="0.9">
+      Frontend Engineer · React
+    </text>
+  </g>
+</svg>

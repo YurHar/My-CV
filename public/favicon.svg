@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 120 130"
+  width="100%"
+  height="100%"
+  role="img"
+  aria-labelledby="title desc"
+  class="yuri-logo"
+>
+  <title id="title">Yuri.dev Logo</title>
+  <desc id="desc">Geometric modern logo mark for Yuri.dev</desc>
+
+  <defs>
+    <!-- Main gradient -->
+    <linearGradient id="grad-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <radialGradient id="grad-glow" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+
+    <style><![CDATA[
+      .yuri-logo { cursor: pointer; }
+      .mark { transform-origin: 60 60; transition: transform .3s ease, filter .3s ease; }
+      .mark polygon { transition: fill .3s ease; }
+      .glow { fill: url(#grad-glow); animation: pulse 3s infinite ease-in-out; }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.85; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+
+      .yuri-logo:hover .mark { transform: rotate(-8deg) scale(1.1); filter: drop-shadow(0 0 15px rgba(99,102,241,0.6)); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .yuri-logo:hover .mark { transform: none; filter: none; }
+        .glow { animation: none; }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Big geometric mark -->
+  <g transform="translate(10,10) scale(1.0)" class="mark">
+    <!-- Glow circle -->
+    <circle class="glow" cx="60" cy="60" r="55"/>
+
+    <!-- Layered triangles forming diamond -->
+    <polygon points="60,5 115,60 60,115 5,60" fill="url(#grad-main)"/>
+    <polygon points="60,15 105,60 60,105 15,60" fill="#4F46E5" opacity="0.6"/>
+    <polygon points="60,30 95,60 60,90 25,60" fill="#7C3AED" opacity="0.9"/>
+
+    <!-- Border outline -->
+    <polygon points="60,5 115,60 60,115 5,60" fill="none" stroke="#ffffff" stroke-opacity="0.15"/>
+  </g>
+
+</svg>
