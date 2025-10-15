@@ -1,4 +1,4 @@
-# Welcome to TanStack.com!
+[[[# Welcome to TanStack.com!
 
 This site is built with TanStack Router!
 
@@ -63,10 +63,11 @@ pnpm i
 pnpm dev
 ```
 
-4. Now you can visit http://localhost:3000/form/latest/docs/overview in the browser and see the changes you make in `tanstack/form/docs`.
+4. Now you can visit http://localhost:3000 in the browser and see the changes you make in `tanstack/form/docs`.
 
 > [!NOTE]
 > The updated pages need to be manually reloaded in the browser.
 
 > [!WARNING]
 > You will need to update the `docs/config.json` file (in the project's repo) if you add a new doc page!
+](http://localhost:3000/)](http://localhost:3000/)](http://localhost:3001/)
