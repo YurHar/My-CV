@@ -37,7 +37,7 @@ jobs:
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # 👈 output folder created by "vite build"
+          path: dist  # vite/TanStack build output
 
   deploy:
     environment:
