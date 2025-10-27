@@ -29,16 +29,15 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build project
         run: npm run build
 
-      # GitHub Pages expects the built site to be uploaded as an artifact
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # 👈 TanStack Start / Vite build output folder
+          path: dist  # 👈 output folder created by "vite build"
 
   deploy:
     environment:
