@@ -12,6 +12,7 @@
     "@tanstack/react-router": "^1.132.47",
     "@tanstack/react-router-devtools": "^1.132.51",
     "@tanstack/react-start": "^1.132.51",
+    "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^12.23.23",
     "lucide-react": "^0.545.0",
     "react": "^19.0.0",
