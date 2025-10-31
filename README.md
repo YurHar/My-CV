@@ -1,1 +1,1 @@
-# [Yuri](https://yurhar.github.io/My-CV/)
+# [my CV](https://yurhar.github.io/My-CV/)
